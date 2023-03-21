@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 /*
         Projeto GeoQuizz_v0
+        https://github.com/udofritzke/GeoQuizz_v0.git
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
             new Questao(R.string.questao_alemanha, false)
     };
     private int mIndiceAtual = 0;
-
     private boolean mEhColador;
 
     @Override
@@ -80,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 // Intent intent = new Intent(MainActivity.this, ColaActivity.class);
                 boolean respostaEVerdadeira = mBancoDeQuestoes[mIndiceAtual].isRespostaCorreta();
                 Intent intent = ColaActivity.novoIntent(MainActivity.this, respostaEVerdadeira);
-
-                //startActivity(intent);
+                startActivity(intent);
                 startActivityForResult(intent, CODIGO_REQUISICAO_COLA);
             }
         });
@@ -116,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int codigoRequisicao, int codigoResultado, Intent dados) {
+        super.onActivityResult(codigoRequisicao, codigoResultado, dados);
         if (codigoResultado != Activity.RESULT_OK) {
             return;
         }
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
             mEhColador = ColaActivity.foiMostradaResposta(dados);
+            Log.d(TAG, Boolean.toString(mEhColador));
         }
     }
 }
