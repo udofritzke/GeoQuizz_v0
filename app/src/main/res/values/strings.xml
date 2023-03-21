@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GeoQuiz V3</string>
+    <string name="botao_verdadeiro">Verdadeiro</string>
+    <string name="botao_falso">Falso</string>
+    <string name="toast_correto">Correto!</string>
+    <string name="toast_incorreto">Incorreto!</string>
+    <string name="toast_julgamento">Não vale, você colou!</string>
+    <string name="botao_proximo">Proximo</string>
+
+    <string name="texto_advertencia">Tem certeza que quer ver a resposta?</string>
+    <string name="botao_mostra_reposta">Mostra resposta</string>
+    <string name="botao_cola">Colar!</string>
+    <string name="texto_avaliacao">Cola está incorreta. </string>
+
+    <string name="questao_alemanha">A capital da Alemanha é Munique</string>
+    <string name="questao_suez">O Canal de Suez conecta o Oceano Índico com o Mar Vermelho</string>
+
+</resources>
