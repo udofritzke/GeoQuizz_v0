@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Questao[] mBancoDeQuestoes = new Questao[]{
             new Questao(R.string.questao_suez, true),
-            new Questao(R.string.questao_alemanha, false)
+            new Questao(R.string.questao_alemanha, false),
+            new Questao(R.string.questao_boca, true)
     };
     private int mIndiceAtual = 0;
     private boolean mEhColador;
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 // Intent intent = new Intent(MainActivity.this, ColaActivity.class);
                 boolean respostaEVerdadeira = mBancoDeQuestoes[mIndiceAtual].isRespostaCorreta();
                 Intent intent = ColaActivity.novoIntent(MainActivity.this, respostaEVerdadeira);
-                startActivity(intent);
+                //startActivity(intent);
                 startActivityForResult(intent, CODIGO_REQUISICAO_COLA);
             }
         });
